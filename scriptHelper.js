@@ -37,21 +37,13 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     let launchStatus = document.getElementById('launchStatus');
     let cargoStatus = document.getElementById('cargoStatus');
 
-    // if (validateInput(pilot) === `Empty`|| validateInput(copilot) === `Empty` || validateInput(fuelLevel) === `Empty` || validateInput(cargoLevel) === `Empty`) {
-    //     alert("All fields are required!");
-    // } else if (validateInput(pilot) === `Is a Number` || validateInput(copilot) === `Is a Number`) {
-    //     alert("Please enter an alphabetical value for the names of the pilots!");
-    // } else if (validateInput(fuelLevel) === `Not a Number` || validateInput(cargoLevel) === `Not a Number`) {
-    //     alert("Please enter a number for values of fuel and cargo levels!");
-    // } else {
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
-        list.style.visibility = "visible";
-        launchStatus.style.color = "green";
-        launchStatus.innerHTML = "Shuttle is Ready for Launch";
+        list.style.visibility = "hidden";
+        launchStatus.style.color = "red";
+        launchStatus.innerHTML = "Shuttle Not Ready for Launch.";
         cargoStatus.innerHTML = "Cargo mass low enough for launch";
         fuelStatus.innerHTML = "Fuel level high enough for launch";
-    // }
 
     if (Number(fuelLevel) < 10000) {
         fuelStatus.innerHTML = "Fuel level too low for launch";
